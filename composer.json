@@ -1,9 +1,9 @@
 {
     "name": "cjsdevelopment/qantani",
-    "description": "A connector for Qantani",
+    "description": "A Laravel connector for Qantani",
     "type": "library",
     "license": "MIT",
-    "version" : "1.0",
+    "version" : "1.0.1",
     "homepage" : "http://www.chilion.nl",
     "authors": [
         {

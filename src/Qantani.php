@@ -11,11 +11,11 @@ class Qantani
     }
 
 
-    public $apiUrl = 'https://www.qantanipayments.com/api/'; /** location of the api */
+    public static $apiUrl = 'https://www.qantanipayments.com/api/'; /** location of the api */
     static public $version = '1.1'; /** CJSDevelopment / Qantani version */
 
-    public function getBanks($parameters = array()){
-        $data = $this->executeRequest('IDEAL.GETBANKS', $parameters, array('Response', 'Banks', 'Bank'));
+    public static function getBanks($parameters = array()){
+        $data = self::executeRequest('IDEAL.GETBANKS', $parameters, array('Response', 'Banks', 'Bank'));
         $res = [];
 
         foreach($data as $item){
@@ -28,10 +28,7 @@ class Qantani
     }
 
 
-    private function executeRequest($function, $parameters, $look_for = array()){
-
-        $this->_last_error = '';
-        $this->_last_error_id = 0;
+    private static function executeRequest($function, $parameters, $look_for = array()){
 
         $data = array(
             'Transaction' => array(
@@ -44,14 +41,14 @@ class Qantani
                 'Merchant' =>array(
                     'ID' => config("qantani.merchant_id"),
                     'Key' => config("qantani.merchant_key"),
-                    'Checksum' => $this->_checksum($parameters),
+                    'Checksum' => self::_checksum($parameters),
                 ),
             )
         );
 
-        $ch = curl_init($this->apiUrl);
+        $ch = curl_init(self::$apiUrl);
         curl_setopt($ch, CURLOPT_VERBOSE, true);
-        curl_setopt($ch, CURLOPT_URL, $this->apiUrl);
+        curl_setopt($ch, CURLOPT_URL, self::$apiUrl);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt ($ch, CURLOPT_POST, true);
         curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
