@@ -41,7 +41,7 @@ class Qantani
                 'Merchant' =>array(
                     'ID' => config("qantani.merchant_id"),
                     'Key' => config("qantani.merchant_key"),
-                    'Checksum' => parent::self()->_checksum($parameters),
+                    'Checksum' => self::$this->_checksum($parameters),
                 ),
             )
         );
