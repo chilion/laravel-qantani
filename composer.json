@@ -1,0 +1,21 @@
+{
+    "name": "cjsdevelopment/qantani",
+    "description": "A connector for Qantani",
+    "type": "library",
+    "license": "MIT",
+    "version" : "1.0",
+    "homepage" : "http://www.chilion.nl",
+    "authors": [
+        {
+            "name": "Chilion Snoek",
+            "email": "chilionsnoek@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+
+    "autoload": {
+      "psr-4": {
+        "CJSDevelopment\\": "src/"
+      }
+    }
+}
