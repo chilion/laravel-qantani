@@ -1,5 +1,6 @@
 ![Image of StyleCI Shield](https://styleci.io/repos/43498274/shield)
-![License](https://packagist.org/packages/cjsdevelopment/qantani)
+[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/cjsdevelopment/qantani)
+
 
 
 # Qantani
