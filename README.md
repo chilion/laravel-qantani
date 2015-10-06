@@ -1,5 +1,8 @@
+![Image of StyleCI Shield]
+(https://styleci.io/repos/43498274/shield)
+
 # Qantani
-A connector to the Qantani Payment API
+A connector to the Qantani Payment API for usage with Laravel or Lumen
 
 # Usage
 ## composer
