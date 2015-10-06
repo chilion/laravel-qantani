@@ -1,5 +1,6 @@
-![Image of StyleCI Shield]
-(https://styleci.io/repos/43498274/shield)
+![Image of StyleCI Shield](https://styleci.io/repos/43498274/shield)
+![License](https://packagist.org/packages/cjsdevelopment/qantani)
+
 
 # Qantani
 A connector to the Qantani Payment API for usage with Laravel or Lumen
