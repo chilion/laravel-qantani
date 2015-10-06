@@ -11,9 +11,10 @@ class QantaniServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot() {
+    public function boot()
+    {
         $this->publishes([
-            __DIR__.'/config/qantani.php' => config_path('qantani.php')
+            __DIR__.'/config/qantani.php' => config_path('qantani.php'),
         ], 'config');
     }
 
@@ -22,7 +23,8 @@ class QantaniServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register() {
+    public function register()
+    {
         //
     }
 }
